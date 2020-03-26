@@ -50,3 +50,14 @@ form button[type=submit] {
 form button[type=submit]:hover {
   background: #6931ca;
 }
+
+@media(max-width: 650px) {
+  form .input-group {
+    gap: 0;
+    grid-template-columns: 1fr;
+  }
+
+  form .input-group .input-block {
+    margin-top: 20px;
+  }
+}

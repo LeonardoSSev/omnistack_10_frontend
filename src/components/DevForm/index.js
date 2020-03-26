@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function DevForm() {
   const [githubUsername, setGithubUsername] = useState('');
   const [techs, setTechs] = useState([]);
   const [longitude, setLongitude] = useState('');
   const [latitude, setLatitude] = useState('');
+
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const { latitude, longitude } = position.coords
+        
+        setLatitude(latitude);
+        setLongitude(longitude);
+      },
+      (error) => {
+        console.error(error)
+      },
+      {
+        timeout: 30000
+      }
+    );
+  }, []);
 
 
   return (

@@ -42,7 +42,7 @@ function App() {
       <main>
         <ul>
           {devs.map(dev => (
-            <DevItem dev={dev}></DevItem>
+            <DevItem key={dev._id} dev={dev}></DevItem>
           ))
           }
         </ul>

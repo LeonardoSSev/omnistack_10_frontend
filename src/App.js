@@ -5,6 +5,7 @@ import api from './services/api';
 
 import './global.css';
 import './App.css';
+import './Aside.css';
 
 function App() {
   const [devs, setDevs] = useState([]);

@@ -3,6 +3,8 @@ import DevForm from './components/DevForm';
 import DevItem from './components/DevItem';
 import api from './services/api';
 
+import './global.css';
+
 function App() {
   const [devs, setDevs] = useState([]);
 

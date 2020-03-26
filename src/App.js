@@ -6,6 +6,7 @@ import api from './services/api';
 import './global.css';
 import './App.css';
 import './Aside.css';
+import './Main.css';
 
 function App() {
   const [devs, setDevs] = useState([]);
@@ -39,10 +40,12 @@ function App() {
         <DevForm saveDev={saveDev}></DevForm>
       </aside>
       <main>
-      {devs.map(dev => (
-        <DevItem key={dev._id} dev={dev}></DevItem>
-      ))
-      }
+        <ul>
+          {devs.map(dev => (
+            <DevItem dev={dev}></DevItem>
+          ))
+          }
+        </ul>
       </main>
     </>
   );
